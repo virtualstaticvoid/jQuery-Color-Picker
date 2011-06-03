@@ -61,7 +61,7 @@
                 create_picker();
                 wrap.append(label);
                 wrap.append(trigger);
-                wrap.append(picker);
+                $('body').append(picker);
                 wrap.append(clear);
                 $(obj).after(wrap);
                 if (options.hide)
@@ -87,7 +87,7 @@
 
             function create_trigger() {
                 trigger.click(function() {
-                    var offset = $(this).position();
+                    var offset = $(this).offset();
                     var top = offset.top;
                     var left = offset.left + $(this).width() + 5;
                     $(picker).css({
